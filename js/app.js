@@ -1,29 +1,20 @@
 var target = 0;
 
-var cargarPagina = function () {
-	// Elementos
-	var botones = document.querySelectorAll(".control");
-	var anterior = document.querySelector(".previous");
-	var siguiente = document.querySelector(".next");
-	
+$(document).ready(function () {
 	// Eventos
-	botones.forEach(function (boton) {
-		boton.addEventListener("click", cambiarImagen);
-	});
-	anterior.addEventListener("click", anteriorImagen);
-	siguiente.addEventListener("click", siguienteImagen);
-};
+	$(".control").click(cambiarImagen);
+	$(".previous").click(anteriorImagen);
+	$(".next").click(siguienteImagen);
+});
 
 var cambiarImagen = function () {
-	target = parseInt(this.dataset.target);
+	target = parseInt($(this).data("target"));
 	mostrarImagen(target);
 };
 
 var mostrarImagen = function (target) {
-	var lastSlide = document.querySelector("div.active");
-	var slide = document.querySelector("div[data-slide='" + target + "']");
-	lastSlide.classList.remove("active");
-	slide.classList.add("active");
+	$("div.active").removeClass("active");
+	$("div[data-slide='" + target + "']").addClass("active");
 };
 
 var anteriorImagen = function (e) {
@@ -39,7 +30,3 @@ var siguienteImagen = function (e) {
 	target = (target > 3) ? 0 : target;
 	mostrarImagen(target);mostrarImagen(target);
 };
-
-
-
-window.addEventListener("load", cargarPagina);
