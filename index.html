@@ -4,30 +4,36 @@
 	<meta charset="UTF-8">
 	<title>Carousel con JS</title>
 	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-	<div class="carousel">
-		<div data-slide="0" class="carousel-content active">
-			<img src="" alt="Imagen 1">
+
+	<div class="row">
+		<div class="carousel col m6 offset-m3">
+			<div data-slide="0" class="carousel-content active">
+				<img src="img/img01.jpg" alt="Imagen 1">
+			</div>
+			<div data-slide="1" class="carousel-content ">
+				<img src="img/img02.jpg" alt="Imagen 2">
+			</div>
+			<div data-slide="2" class="carousel-content ">
+				<img src="img/img03.jpg" alt="Imagen 3">
+			</div>
+			<div data-slide="3" class="carousel-content">
+				<img src="img/img04.jpg" alt="Imagen 4">
+			</div>
 		</div>
-		<div data-slide="1" class="carousel-content ">
-			<img src="" alt="Imagen 2">
-		</div>
-		<div data-slide="2" class="carousel-content ">
-			<img src="" alt="Imagen 3">
-		</div>
-		<div data-slide="3" class="carousel-content">
-			<img src="" alt="Imagen 4">
+		<div class="controls col m6 offset-m3">
+			<a href="#" class="previous btn-floating btn-medium waves-effect waves-light blue"></a>
+			<button type="button" data-target="0" class="control btn-floating btn-medium waves-effect waves-light pink material-icons">grade</button>
+			<button type="button" data-target="1" class="control btn-floating btn-medium waves-effect waves-light pink material-icons">grade</button>
+			<button type="button" data-target="2" class="control btn-floating btn-medium waves-effect waves-light pink material-icons">grade</button>
+			<button type="button" data-target="3" class="control btn-floating btn-medium waves-effect waves-light pink material-icons">grade</button>
+			<a href="#" class="next btn-floating btn-medium waves-effect waves-light blue"></a>
 		</div>
 	</div>
-	<div class="controls">
-		<a href="#" class="previous">&#60;</a>
-		<button type="button" data-target="0" class="control"></button>
-		<button type="button" data-target="1" class="control"></button>
-		<button type="button" data-target="2" class="control"></button>
-		<button type="button" data-target="3" class="control"></button>
-		<a href="#" class="next">&#62;</a>
-	</div>
+
 	<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
 	<script src="js/app.js"></script>
 </body>

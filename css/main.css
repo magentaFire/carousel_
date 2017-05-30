@@ -6,3 +6,7 @@
 	display: block;
 }
 
+.carousel, .controls, .next, .previous {
+	display: flex;
+	justify-content: space-between;
+}
